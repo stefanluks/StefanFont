@@ -6,7 +6,9 @@ window.onload = () => {
     const form = app.querySelector("#entrada-texto");
     let titulo = document.querySelector(".titulo");
     let palavra = titulo.textContent;
+    
     Escrever(titulo, palavra);
+
     function Escrever(elemento, texto){
         let listinha = []
         texto.split('').forEach(letra => {
@@ -35,5 +37,9 @@ window.onload = () => {
         let entrada = form.querySelector("input");
         Escrever(null,entrada.value);
         entrada.value = null;
+    });
+
+    document.querySelector("#apagar").addEventListener("click",()=>{
+        visor.innerHTML = '';
     })
 }
